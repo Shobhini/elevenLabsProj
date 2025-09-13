@@ -4,13 +4,13 @@ import React, {useState} from 'react'
 const Home = () => {
   const [activeFeature, setActiveFeature] = useState("Text to Speech")
   const features = [
-    "Text to Speech",
-    "Agents",
-    "Music",
-    "Speech to Text",
-    "Dubbing",
-    "Voice Cloning",
-    "ElevenMultilingual"
+    "TEXT TO SPEECH",
+    "AGENTS",
+    "🎵 MUSIC",
+    "SPEECH TO TEXT",
+    "DUBBING",
+    "🔊VOICE CLONING",
+    "📖ELEVENREADER"
   ]
 
 
@@ -33,13 +33,13 @@ const Home = () => {
         </div>
 
       </div>  
-      <div className="border-gray-300 rounded gap-4 mb-8 flex justify-center flex-wrap">
+      <div className="border-gray-500 gap-2 mb-4 transition-colors duration-200 flex justify-center flex-wrap font-thin-bold text-sm mt-10">
         {features.map((feature) => (
           <button 
             key={feature} 
             onClick ={() => setActiveFeature(feature)}
-            className={`px-4 py-2 rounded-border${
-              activeFeature === feature ? "border-black" : "border-gray-300"
+            className={`px-2 py-1 rounded-border${
+              activeFeature === feature ? " bg-gray-400 rounded-3xl" : "border-gray-100"
             }`}
           >
             {feature}
@@ -47,7 +47,7 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="flex justify-center">
+      <div className="font-medium flex justify-center">
         <textarea
           className="flex flex-col md:flex-row justify-between max-w-3xl w-full h-40 p-4 border border-gray-300 rounded mb-6"
           placeholder="Enter your story here..."
